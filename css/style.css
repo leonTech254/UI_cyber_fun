@@ -1,0 +1,222 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body
+{
+    background-color: #ccc;
+}
+nav
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+nav ul
+{
+display: flex;
+gap: 1rem;
+}
+
+nav ul li a
+{
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    transition: 2s;
+
+}
+nav ul li a::before
+{
+position: absolute;
+content: ' ';
+background-color: red;
+width: 0%;
+height: 4%;
+bottom: 1rem;
+transition: .5s;
+
+}
+nav ul li a:hover::before
+{
+    width: 50%;
+
+}
+.uppersection
+{
+    height: 50vh;
+    /* background-color: red; */
+    background-image: url("./images/bg1.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.welcome_message
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ccc;
+    text-align: center;
+}
+.welcome_message span
+{
+    font-size: x-large;
+}
+.services_section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh;
+
+}
+.card_container
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.services_section h1
+{
+    text-align: center;
+}
+.card
+{
+    height: fit-content;
+    padding: 10px;
+    background-color: #2d2760;
+    text-align: center;
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow:0 0 1px #2d2760;
+    transition: 2s;
+    cursor: pointer;
+    color: #fff;
+    min-height: 14rem;
+}
+.card:hover
+{
+    box-shadow:0 0 15px red;
+    border: 1px solid red;
+}
+.card h3
+{
+    color: cyan;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: x-small;
+}
+.card p
+{
+    font-size: small;
+}
+
+
+.cyber_sec_quotes
+{
+    height: 70vh;
+    background-color: #2d2760;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+.cyber_sec_quotes p
+{
+    color: #fff;
+    width: 70%;
+    margin: auto;
+    font-size: x-large;
+    text-align: justify;
+
+}
+
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  .important_links
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social a,  .important_links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+  }
+  footer h2
+  {
+    color: #2d2760;
+  }
+
+  .copyright
+  {
+    height: 2rem;
+    background-color: #2d2760;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+/* mobile view */
+
+@media (max-width:768px)
+{
+    .card_container
+{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.welcome_message
+{
+    font-size: small;
+    width: 100%;
+
+}
+.welcome_message span
+{
+    text-shadow: 1px 1px 5px red;
+}
+nav ul li a
+{
+    padding: unset;
+}
+.cyber_sec_quotes
+{
+    padding: 10px;
+    min-height: 40vh;
+}
+.cyber_sec_quotes p
+{
+    font-size: small;
+    padding: unset;
+    width: unset;
+}
+footer
+{
+    grid-template-columns: repeat(1,1fr);
+}
+footer h2
+{
+font-size: small;
+}
+}
